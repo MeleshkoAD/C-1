@@ -11,15 +11,8 @@
 
 int num = new Random().Next(100, 1000);
 
-int numA = num % 100;
-int numB = (num - 100 * numA) / 10;
-int numC = (num - 100 * numA - numB * 10);
-
-// string strA = numA.ToString;
-// string strC = numC.ToString;
-
-// int numD = Convert.ToInt32(strA + strC);
-
+int numA = num / 100;
+int numC = num % 10;
 int numD = numA * 10 + numC;
 
 Console.WriteLine($"{num} -> {numD}");
