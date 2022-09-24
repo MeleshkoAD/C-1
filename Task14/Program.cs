@@ -3,25 +3,18 @@
 // 46 -> нет
 // 161 -> да
 
-int checkMultiple(int check_arg, int divarg1, int divarg2)
+
+Console.Write("Введите первый делитель: ");
+int numA = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите второй делитель: ");
+int numB = Convert.ToInt32(Console.ReadLine());
+Console.Write("Введите делимое: ");
+int numС = Convert.ToInt32(Console.ReadLine());
+
+bool Multiple(int num, int numD)
 {
-    int result = 1;
-    if (check_arg % divarg1 == 0 && check_arg % divarg2 == 0) result = 0;
-    return result;
+    return ((num%numD) == 0);
 }
 
-Console.Write("Введите число кратность которого мы будем проверять: ");
-int numCheck = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите первое число на кратность которго мы будем проверять: ");
-int firstNum = Convert.ToInt32(Console.ReadLine());
-Console.Write("Введите второе число на кратность которго мы будем проверять: ");
-int secondNum = Convert.ToInt32(Console.ReadLine());
-int resultMehod = checkMultiple (numCheck, firstNum, secondNum);
-if (resultMehod == 0)
-{
-    Console.Write("да");
-}
-else
-{
-    Console.Write("нет");
-}
+if (Multiple(numС,numA)&& Multiple(numС,numB)) Console.WriteLine("кратно обоим");
+   else Console.WriteLine("Не кратно обоим");
