@@ -3,7 +3,7 @@
 Console.WriteLine("Введите номер четверти");
 string quarterNum = Console.ReadLine();
 
-string FindRange(int num)
+string FindRange(string num)
 {
     string phrase = "Диапазон координат находится в пределах";
     
